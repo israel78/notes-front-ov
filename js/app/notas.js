@@ -36,6 +36,7 @@ var notas = {
 			$('#titulo').val("");
 			$('#body').val("");
 			$('#idnota').attr('disabled','disabled');
+			$('#idnota').val()==""
 			$("#enlacePestana2").text("Añadir nueva nota");
 			$("#tituloTabDetalle").text("Añadir nueva nota");
 			$("#pestana1").removeClass("active");

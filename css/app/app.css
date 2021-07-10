@@ -1,0 +1,98 @@
+/*
+Version: 1.0 Timestamp: 2018/01/16
+CSS con estilos genéricos para grillowebV2 - TELCO
+*/
+
+
+/* blink text. URL: http://stackoverflow.com/questions/16344354/how-to-make-blinking-flashing-text-with-css3/16344389#comment54567328_16344389 */
+.blink {
+	animation: blinker 1.7s cubic-bezier(.5, 0, 1, 1) infinite alternate;  
+}
+@keyframes blinker {  
+	from { opacity: 1; }
+	to { opacity: 0; }
+}
+/* blink text */
+
+
+/* tag "hidden", div "hidden" (oculto). //URL: http://stackoverflow.com/questions/1992114/how-do-you-create-a-hidden-div-that-doesnt-create-a-line-break-or-horizontal-sp */
+.hide, .hidden {
+	display: none;
+}
+
+/* línea separadora: 
+   <div style="border-top: 1px solid #dee3ea;"></div> <!-- linea separadora --> 
+   <div class="div-linea_separadora"></div> <!-- linea separadora --> 
+*/
+.div-linea_separadora {
+	border-top: 1px solid #dee3ea;		/* línea más clara */
+	/* border-top: 1px solid grey; */	/* línea más oscura */
+	padding-bottom: 4px;
+}
+
+
+/* Eliminamos padding de las cajas contenedoras, para que quepan más datos */
+.md-skin .wrapper-content {
+    /* padding: 30px 20px 40px; */
+	padding: 0px;
+}
+.wrapper-content {
+    /* padding: 20px 10px 40px; */
+	padding: 0px;
+}
+.wrapper {
+    /* padding: 0 20px; */
+	padding: 0px;
+}
+
+ul {
+	list-style: none;
+}
+
+/* hacemos más ancho el desplegable de las notificaciones */
+.navbar-top-links .dropdown-alerts {
+    width: 800px; /* 310px */
+}
+
+/* scroll vertical en la tabla de las notificaciones. URL: https://stackoverflow.com/questions/17067294/html-table-with-100-width-with-vertical-scroll-inside-tbody */
+.tabla_notificacion {
+	height: 500px;
+	display: inline-block;   /* para el scroll vertical */
+	overflow-y: auto; /* Trigger vertical scroll */
+	overflow-x: hidden;  /* Hide the horizontal scroll */	
+}
+
+/* size icono columna icon-nofificacion */
+.fa_notificacion {
+	font-size: 16px;
+}
+/* size icono columna ¿leído? */
+.fa_leido {
+	font-size: 22px;
+}
+
+
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.clear{
+	clear: both;
+}
+
+.margin-right {
+	margin-right: 30px;
+}
+
+.infoFiltrado {
+	background-color: #2593B5;
+	color: white;
+	padding: 10px;
+	border-radius: 10px;
+}
+

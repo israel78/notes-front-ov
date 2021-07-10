@@ -3,6 +3,7 @@ var id = '';
 $( document ).ready(function() {
 	token = sessionStorage.getItem("Token");
 	id = sessionStorage.getItem("id");
+	$('#idnota').val()==""
 });
 var urlBase = '';
 $( document ).ready(function() {

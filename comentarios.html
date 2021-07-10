@@ -1,0 +1,199 @@
+<!doctype html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+<title>NOTAS</title>
+
+<style>
+.modal-dialog {
+	width: max-content !important;
+}
+</style>
+</head>
+<!-- ............ INSPIRINA ............ -->
+<!-- CSS -->
+<!-- raíz -->
+<link href="inspinia_admin-v2.7.1/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<link href="inspinia_admin-v2.7.1/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+<link href="inspinia_admin-v2.7.1/css/animate.css" rel="stylesheet" type="text/css" />
+<link href="inspinia_admin-v2.7.1/css/style.css" rel="stylesheet" type="text/css" />
+<link href="css/app/datepicker.css" rel="stylesheet" type="text/css" />
+<!-- Plugins - dataTables -->
+<link href="inspinia_admin-v2.7.1/css/plugins/dataTables/datatables.min.css" rel="stylesheet" type="text/css" />
+<!-- Plugins - jQueryUI -->
+<link href="inspinia_admin-v2.7.1/css/plugins/jQueryUI/jquery-ui-1.10.4.custom.min.css" rel="stylesheet" type="text/css" />
+<!-- FIN CSS -->
+<!-- JS -->
+<!-- raíz -->
+<script src="inspinia_admin-v2.7.1/js/jquery-3.1.1.min.js"></script>
+<script src="inspinia_admin-v2.7.1/js/bootstrap.min.js"></script>
+<script src="inspinia_admin-v2.7.1/js/inspinia.js"></script>
+<!-- Plugins - dataTables -->
+<script src="inspinia_admin-v2.7.1/js/plugins/dataTables/datatables-1.10.13.min.js" type="text/javascript"></script>
+<script src="inspinia_admin-v2.7.1/js/plugins/dataTables/plugins/ellipsis.min.js" type="text/javascript"></script>
+<script src="inspinia_admin-v2.7.1/js/plugins/dataTables/plugins/buttons.colVis.min.js" type="text/javascript"></script>
+<!-- dataTable. colReorder.js -->
+<link href="inspinia_admin-v2.7.1/js/plugins/dataTables/plugins/colReorder/colReorder.dataTables.min.css" rel="stylesheet" type="text/css"/>
+<script src="inspinia_admin-v2.7.1/js/plugins/dataTables/plugins/colReorder/dataTables.colReorder.min.js" type="text/javascript"></script>
+<!-- dataTable. autoFilter.js -->
+<link href="inspinia_admin-v2.7.1/js/plugins/dataTables/plugins/autoFilter_yadcf/dycec/jquery.dataTables.yadcf.css" rel="stylesheet" type="text/css" media="screen" />
+<script src="inspinia_admin-v2.7.1/js/plugins/dataTables/plugins/autoFilter_yadcf/dycec/jquery.dataTables.yadcf.min.js" type="text/javascript"></script>
+
+<!-- Plugins - jQueryUI -->
+<script src="inspinia_admin-v2.7.1/js/plugins/jQueryUI/jquery-ui-1.12.1.min.js"></script>
+<!-- Plugin - Dialogs -->
+<!-- Plugin - bootstrap-dialog -->
+<link href="js/bootstrap-dialog/bootstrap-dialog.min.css" rel="stylesheet" type="text/css" />
+<script src="js/bootstrap-dialog/bootstrap-dialog.min.js"></script>
+<script src="js/bootstrap-dialog/ui.js"></script>
+<!--  <script src="${pageContext.request.contextPath}/js/plugins/datepicker/bootstrap_datepicker.js"></script>-->
+<!-- plugin dataTimePicker -->
+<link href="inspinia_admin-v2.7.1/css/plugins/dateTimePicker/bootstrap-datetimepicker.css" rel="stylesheet" type="text/css"/>
+<script src="inspinia_admin-v2.7.1/js/plugins/dateTimePicker/bootstrap-datetimepicker.js" type="text/javascript"></script>
+<script src="inspinia_admin-v2.7.1/js/plugins/dateTimePicker/bootstrap-datetimepicker.es.js" type="text/javascript"></script>
+<script src="inspinia_admin-v2.7.1/js/plugins/dateTimePicker/moment.js" type="text/javascript"></script>
+<!-- Plugins - metisMenu -->
+<script src="inspinia_admin-v2.7.1/js/plugins/metisMenu/jquery.metisMenu-2.0.2.js"></script>
+
+<!-- Plugins - slimscroll -->
+<script src="inspinia_admin-v2.7.1/js/plugins/slimscroll/jquery.slimscroll-1.3.6.min.js"></script>
+<!-- Plugins - pace -->
+<script src="inspinia_admin-v2.7.1/js/plugins/pace/pace-1.0.2.min.js"></script>
+<!-- select chosen 1.1.0 -->
+<link href="inspinia_admin-v2.7.1/js/plugins/chosen/bootstrap-chosen.css" rel="stylesheet" type="text/css" />
+<script src="inspinia_admin-v2.7.1/js/plugins/chosen/chosen.jquery.min.js"></script>
+<script src="js/app/notas.js"></script>
+<script src="js/app/dycec_js.js"></script>
+<script type="text/javascript">	
+	$( document ).ready(function() {
+});	
+</script>
+</head>
+<body class="fixed-sidebar fixed-nav md-skin pace-done" landing-scrollspy id="page-top">
+
+	<div class="pace pace-inactive">
+		<div class="pace-progress" data-progress-text="100%" data-progress="99"
+			style="transform: translate3d(100%, 0px, 0px);">
+			<div class="pace-progress-inner"></div>
+		</div>
+		<div class="pace-activity"></div>
+	</div>
+	<!-- PAGE WRAPPER -->
+		<!-- WRAPPER CONTENT -->
+		<div class="wrapper wrapper-content animated fadeInRight">
+			<div class="tabs-container">
+				<ul class="nav nav-tabs" role="tablist">
+					<li id="pestana1" class="active"><a class="nav-link active"
+						data-toggle="tab"
+						onclick="accionesRelevantes.volverAlistado('null')"
+						href="#tab-1">Notas</a></li>
+					<li id="pestana2"><a id="enlacePestana2" class="nav-link"
+						data-toggle="tab" href="#">Detalle/añadir</a></li>
+				</ul>
+				<div class="tab-content">
+					<div role="tabpanel" id="tab-1" class="tab-pane active">
+						<div class="col-lg-12">
+							<div class="ibox float-e-margins">
+								<div class="ibox-content">
+									<div class="row col-lg-12">
+									</div>
+									<table id="tabla_comentarios"
+										class="nowrap table table-striped table-bordered table-hover"
+										width="100%" cellspacing="0">
+									</table>
+							</div>
+							</div>
+							<!-- FIN CONTENIDO -->
+						</div>
+					</div>
+					<div role="tabpanel" id="tab-2" class="tab-pane">
+						<div class="col-lg-12">
+							<!-- CAJA TABLA -->
+							<div class="ibox float-e-margins">					
+								<!-- TITULO TABLA -->
+								<div class="ibox-title">
+									<h5 id="tituloTabDetalle">Actualizar Nota</h5>
+								</div>
+								<!-- FIN TITULO TABLA -->
+								<!-- CONTENIDO -->
+								<div class="ibox-content" style="min-height: 130px;">
+								<div class="row">
+									<div class="col-lg-12">
+										<div class="form-group">
+											<label>Id nota</label>
+											<input type="text" id="idnota" class="form-control m-b"
+												name="tpoIndicendia" rows="1" maxlength="20"
+												placeholder="">
+											</textarea>
+										</div>
+									</div>
+										<div class="col-lg-12">
+											<div class="form-group">
+												<label>Título</label>
+												<input type="text" id="titulo" class="form-control m-b"
+													name="tpoIndicendia" rows="4" maxlength="250"
+													placeholder="A rellenar (250 caracteres max.)">
+												</textarea>
+											</div>
+										</div>
+										<div class="col-lg-12">
+											<div class="form-group">
+												<label>Nota</label>
+												<textarea id="body" class="form-control m-b"
+													name="tpoIndicendia" rows="4" maxlength="300"
+													placeholder="A rellenar (300 caracteres max.)">
+												</textarea>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-lg-4">
+											<!--AIM NUMERO DE FILA A ACTUALIZAR -->
+											<input id="hiddenNumFila" style="display: none"
+												class="form-control m-b" value=""> <input
+												id="fechaSemana" style="display: none" class="form-control m-b"
+												value="">
+										</div>
+										<div class="col-lg-8">
+											<div class="col-lg-12 form-group"
+												style="margin-top: 25px !important">
+												<button type="button" class="btn btn-w-m btn-info btn-sm"
+													style="margin-left: 0px !important; min-width: 90px !important"
+													onclick="notas.volverAlistado('null')">Volver</button>
+												<button type="button" id="botonBorrarCampos"
+													class="btn btn-w-m btn-success btn-sm"
+													style="margin-left: 0px !important; min-width: 90px !important"
+													onclick="notas.borrarCamposEditables('null')">Borrar
+													campos</button>
+												<button type="button" id="botonAnnadir"
+													class="btn btn-w-m btn-success btn-sm"
+													style="margin-left: 0px !important; min-width: 90px !important"
+													onclick="notas.insertarActualizarNota()">Añadir</button>
+												<button type="button" id="botonBorrarRegistro"
+													class="btn btn-w-m btn-danger btn-sm"
+													style="margin-left: 0px !important; min-width: 90px !important"
+													onclick="notas.borrarNota(null)">Borrar</button>
+												<button type="button" class="btn btn-w-m btn-success btn-sm"
+													id="botonActualizar"
+													style="margin-left: 0px !important; min-width: 90px !important"
+													onclick="notas.insertarActualizarNota()">Actualizar</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- FIN CONTENIDO -->
+		</div>
+<script type="text/javascript">
+	$(document).ready(function() {		
+	});
+</script>
+
+</body>
+<!-- BODY -->
+</html>

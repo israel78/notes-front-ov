@@ -1,0 +1,77 @@
+/*
+Version: 1.0 Timestamp: 2018/01/16
+CSS con estilos para los dataTables de una app con menú_superior + menú_lateral_izquierda.
+*/
+
+
+/* Tabla. Celdas. padding-margen de las celdas, para que quepan más filas por página. */
+.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+	padding: 3px; /* estaba en padding: 8px; */	
+}
+
+
+
+/* tabla - rows. altura más pequeña. 
+   URL: http://stackoverflow.com/questions/339923/how-to-set-cellpadding-and-cellspacing-in-css
+        http://quirksmode.org/css/css2/tables.html 
+*/
+/* #tablaDatos { line-height: 15px; } */
+table.table_ {
+	border-collapse: collapse;
+	border-spacing: 0px;
+}
+table.table_ tr {
+	line-height: 1px; 
+}
+/* Tabla. Celdas. padding-margen de las celdas. */
+table.table_ td { 
+	/* padding: 0px; */ /* sin nada de margen, con esto nos caben más filas en la pantalla */
+	padding: 10px 5px; /* estaba en padding: 11px 9px; */
+}
+
+
+/* Tabla. colores filas pares/impares. URL_colores_CSS: http://www.w3schools.com/cssref/css_colornames.asp */
+/*
+table.dataTable td.sorting_1 { background-color: white; border: 1px lightgrey; }
+table.dataTable td { background-color: white;  border: 1px lightgrey; }
+table.dataTable tr.even { background-color: white;  border: 1px lightgrey; }
+table.dataTable tr.even { background-color: #FFFFFF; } /* blanco *_/
+table.dataTable tr.odd { background-color: #F9F9F9; } /* verde-azul muy clarito, valor original de DetailAdmin en "jquery.dataTables.css" *_/
+table.dataTable tr.odd { background-color: #E0E0E0; } /* gris_claro. Valor por defecto en "jquery.dataTables.css" modificado por nosotros, el original era #F9F9F9. *_/
+table.dataTable tr.odd { background-color: #ADEBEB; }  /* azul *_/
+table.table tr.odd { background-color: #E9EAE8; }  /* gris más claro que lightgray, gris más oscuro que "#f9f9f9" *_/
+table.table tr.odd { background-color: #f9f9f9; }  /* original bootstrap. gris muy claro *_/
+*/
+.gri_column { background-color: lightblue; }
+
+/* table.dataTable tr.even { background-color: White; } */ 
+/* Tabla. color columna 1ª ordenada */
+/* table.dataTable tr.odd td.sorting_1 { background-color: LightBlue; } */ /* */
+/* Tabla. color columna 2ª ordenada, ... */
+/* table.dataTable tr.odd td.sorting_2 { background-color: LightBlue; } */
+/* Tabla. color fila seleccionada */ /* //FALTA. Mirar por qué no funciona */	    
+table.table tr.row_selected__comentado td { background-color: #D3D4D3 !important; } /* Red, DeepSkyBlue */
+/* Tabla. puntero sobre las filas. URL: http://www.w3schools.com/cssref/pr_class_cursor.asp 
+   NOTA: inherit, el cursor se cambiará a "text" cuando pasemos por un texto seleccionable 
+ * default: flecha; pointer: mano_con_dedo_indice; text: insert=texto_seleccionable */
+/* 
+table.dataTable tbody tr { cursor: inherit; } 
+*/
+
+
+/* CSS para mostrar en rojo una fila que se actualizó hace menos de 15 minutos */
+.row_updated {
+    background-color: #FFD8BA !important;
+}
+
+/* Info paginación */
+#id_datatable_info {
+	text-align: right;
+}
+.dataTables_length {
+    padding-top: 2px;
+}
+div.dataTables_info {
+    padding-top: 2px !important;
+}
+
